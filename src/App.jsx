@@ -44,52 +44,97 @@ const Badge = ({ children }) => (
 );
 
 // --- Sections ---
-
-const TrustSection = () => (
-  <section className="px-4 py-16 bg-zinc-900/30 border-t border-b border-white/5">
-    <div className="max-w-6xl mx-auto text-center">
-      {/* Сокращенный заголовок */}
-      <h2 className="text-3xl font-bold text-white mb-4">Trusted by Top Trucking Fleets</h2>
-      {/* Сокращенный подзаголовок */}
-      <p className="text-xl text-zinc-400 mb-12 max-w-3xl mx-auto">
-        Fleets and recruiting teams rely on our system to build predictable driver-hiring pipelines without job boards or costly recruiters.
-      </p>
-
-      {/* Logos Block */}
-      <div className="grid grid-cols-3 md:grid-cols-6 gap-8 items-center max-w-6xl mx-auto opacity-70">
-        {/* Mock Logos - Using placeholders for illustration */}
-        {[
-          "North Star Logistics",
-          "TransGlobal Freight",
-          "Eagle Transport Co.",
-          "Pacific Hauling",
-          "Midwest Express",
-          "Rocky Mountain Fleet"
-        ].map((name, index) => (
-          <div 
-            key={index} 
-            className="flex justify-center items-center h-16 grayscale hover:grayscale-0 transition-all duration-500 cursor-pointer"
-          >
-            {/* Simple Text Placeholder for Logo */}
-            <span className="text-sm font-semibold text-zinc-500 hover:text-white transition-colors">
-                {name}
-            </span>
-            {/* You would use an actual image tag for a real logo here: 
-                <img src={`/path/to/logo${index}.svg`} alt={`${name} logo`} className="max-h-10 w-auto" /> 
-            */}
-          </div>
-        ))}
-      </div>
-
-      {/* Сокращенная поддерживающая строка */}
-      <p className="text-sm text-zinc-500 mt-12">
-        Trusted by regional and large carriers managing 25–250+ trucks.
-      </p>
-    </div>
-  </section>
+/* ===== SVG ICONS (INLINE) ===== */
+/* ===== SVG ICONS (INLINE) ===== */
+const LogoStack = ({ className = "" }) => (
+  <svg viewBox="0 0 40 48" xmlns="http://www.w3.org/2000/svg" className={className}>
+    <g clipRule="evenodd" fillRule="evenodd">
+      <path
+        d="m34.5868 8.40061-9.6868-2.59556c-.6687-.17919-1.2108.23679-1.2108.92911v10.02854c0 .6923.5421 1.3988 1.2108 1.578l9.6868 2.5955c.6687.1792 1.2109-.2368 1.2109-.9291v-10.02848z"
+        fill="#8098f9"
+      />
+      <path
+        d="m26.9812 16.5707-12.1085-3.2444c-.6687-.1792-1.2109.2368-1.2109.9291v12.5356c0 .6923.5422 1.3988 1.2109 1.578l12.1085 3.2445c.6687.1792 1.2108-.2368 1.2108-.9291v-12.5356z"
+        fill="#6172f3"
+      />
+      <path
+        d="m19.3736 24.7409-14.53021-3.8934c-.66873-.1792-1.21085.2368-1.21085.9291v15.0428c0 .6923.54212 1.3988 1.21085 1.578l14.53021 3.8933c.6687.1792 1.2108-.2368 1.2108-.9291v-15.0427z"
+        fill="#444ce7"
+      />
+    </g>
+  </svg>
 );
 
+const LogoWordmark = ({ className = "" }) => (
+  <svg viewBox="0 0 188 48" xmlns="http://www.w3.org/2000/svg" className={className}>
+    <g fill="currentColor">
+      <path d="m0 15.8981h17.3455l-17.0613 17.0613 2.7564 2.7564 17.0613-17.0613v17.3455h.1104l3.7877-3.7877v-15.9638l-4.2485-4.2485h-15.966z" />
+    </g>
+  </svg>
+);
 
+const LogoCircle = ({ className = "" }) => (
+  <svg viewBox="0 0 197 48" xmlns="http://www.w3.org/2000/svg" className={className}>
+    <g fill="currentColor">
+      <path
+        clipRule="evenodd"
+        fillRule="evenodd"
+        d="m0 24c15.2548 0 24-8.7452 24-24 0 15.2548 8.7452 24 24 24-15.2548 0-24 8.7452-24 24 0-15.2548-8.7452-24-24-24z"
+      />
+    </g>
+  </svg>
+);
+
+/* ===== TRUST SECTION ===== */
+const TrustSection = () => {
+  const logos = [
+    { name: "North Star Logistics", Icon: LogoStack },
+    { name: "TransGlobal Freight", Icon: LogoWordmark },
+    { name: "Eagle Transport Co.", Icon: LogoCircle },
+    { name: "Pacific Hauling", Icon: LogoStack },
+    { name: "Midwest Express", Icon: LogoWordmark },
+    { name: "Rocky Mountain Fleet", Icon: LogoCircle }
+  ];
+
+  return (
+    <section className="px-4 py-16 bg-zinc-900/30 border-t border-b border-white/5">
+      <div className="max-w-6xl mx-auto text-center">
+        <h2 className="text-3xl font-bold text-white mb-4">
+          Trusted by Top Trucking Fleets
+        </h2>
+
+        <p className="text-xl text-zinc-400 mb-12 max-w-3xl mx-auto">
+          Fleets and recruiting teams rely on our system to build predictable
+          driver-hiring pipelines without job boards or costly recruiters.
+        </p>
+
+        {/* Logos Block */}
+        <div className="grid grid-cols-3 md:grid-cols-6 gap-8 max-w-6xl mx-auto">
+          {logos.map(({ name, Icon }, index) => (
+            <div
+              key={index}
+              className="group flex flex-col items-center gap-3 grayscale hover:grayscale-0 transition-all duration-500"
+            >
+              {/* ICON */}
+              <div className="flex items-center justify-center h-10 w-full">
+                <Icon className="h-8 w-auto max-w-[110px] block mx-auto text-white/70 transition-colors group-hover:text-white" />
+              </div>
+
+              {/* COMPANY NAME */}
+              <span className="text-xs font-medium text-zinc-500 text-center transition-colors leading-tight group-hover:text-white">
+                {name}
+              </span>
+            </div>
+          ))}
+        </div>
+
+        <p className="text-sm text-zinc-500 mt-12">
+          Trusted by regional and large carriers managing 25–250+ trucks.
+        </p>
+      </div>
+    </section>
+  );
+};
 const HomeSection = ({ setPage }) => (
   // Added space-y-24 to separate the new section
   <div className="space-y-24 animate-in fade-in slide-in-from-bottom-4 duration-700">
@@ -996,7 +1041,7 @@ const App = () => {
               <ul className="space-y-2 text-zinc-500">
                 <li>hello@blueprint.ai</li>
                 <li>+1 (555) 123-4567</li>
-                <li>Chicago, IL</li>
+                <li>Winnipeg, MB</li>
               </ul>
             </div>
           </div>
