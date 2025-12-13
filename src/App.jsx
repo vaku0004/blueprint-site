@@ -383,7 +383,7 @@ const CEOSummarySection = () => (
       {/* Image (Right Side) - kept h-[500px] for size consistency */}
       <div className="relative h-[500px] w-full">
         <img 
-          src="https://images.unsplash.com/photo-1665686306574-1ace09918530?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+          src="https://plus.unsplash.com/premium_photo-1683121132274-953b07f17ec7?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
           alt="Профессиональный портрет генерального директора." 
           className="absolute inset-0 object-cover w-full h-full rounded-3xl shadow-2xl shadow-black/50"
         />
@@ -412,16 +412,16 @@ const TeamMemberCard = ({ name, title, imageUrl }) => (
 const TeamSection = () => {
     // Обновленные URL-адреса изображений для реалистичного вида
     const teamMembers = [
-        { name: "Amrit Dhingraaj", title: "CEO", imageUrl: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-        { name: "Mark Stulzer", title: "President", imageUrl: "https://images.unsplash.com/photo-1522075469751-3a6694fa2a9a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-        { name: "Patrick Doohan", title: "Sr. Client Success Manager", imageUrl: "https://images.unsplash.com/photo-1506794778202-dfa9254c676d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-        { name: "Justin Craddock", title: "Client Success Manager", imageUrl: "https://images.unsplash.com/photo-1494790108377-be9c29b29329?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-        { name: "Courtney Green", title: "Customer Success Representative", imageUrl: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=1961&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-        { name: "John Vosper", title: "Business Development Representative", imageUrl: "https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-        { name: "Sara Shergold", title: "Lead Operations Coordinator", imageUrl: "https://images.unsplash.com/photo-1507003211169-0a812d468160?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-        { name: "Angelica Venancio", title: "Operations Coordinator", imageUrl: "https://images.unsplash.com/photo-1519085360753-af0f3f4e2455?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-        { name: "Syed Raza", title: "Lead Tech", imageUrl: "https://images.unsplash.com/photo-1559199201-d85c2c5c00e1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-        { name: "Ali Raza", title: "Tech Associate", imageUrl: "https://images.unsplash.com/photo-1531427186611-ecfd6d936ad9?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+        { name: "Amrit Dhingraaj", title: "CEO", imageUrl: "https://images.unsplash.com/photo-1630433595897-f284875f62ad?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDU3fHx8ZW58MHx8fHx8" },
+        { name: "Mark Stulzer", title: "President", imageUrl: "https://plus.unsplash.com/premium_photo-1722859288966-b00ef70df64b?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDl8fHBvcnRyYWl0fGVufDB8fDB8fHww" },
+        { name: "Patrick Doohan", title: "Sr. Client Success Manager", imageUrl: "https://plus.unsplash.com/premium_photo-1664536392779-049ba8fde933?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDczfHx8ZW58MHx8fHx8" },
+        { name: "Justin Craddock", title: "Client Success Manager", imageUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjN8fHBvcnRyYWl0fGVufDB8fDB8fHww" },
+        { name: "Courtney Green", title: "Customer Success Representative", imageUrl: "https://plus.unsplash.com/premium_photo-1689977927774-401b12d137d6?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTg5fHxwb3J0cmFpdHxlbnwwfHwwfHx8MA%3D%3D" },
+        { name: "John Vosper", title: "Business Development Representative", imageUrl: "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTYzfHxwb3J0cmFpdHxlbnwwfHwwfHx8MA%3D%3D" },
+        { name: "Sara Shergold", title: "Lead Operations Coordinator", imageUrl: "https://images.unsplash.com/photo-1557053908-4793c484d06f?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTIwfHxwb3J0cmFpdHxlbnwwfHwwfHx8MA%3D%3D" },
+        { name: "Angelica Venancio", title: "Operations Coordinator", imageUrl: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+        { name: "Syed Raza", title: "Lead Tech", imageUrl: "https://plus.unsplash.com/premium_photo-1682096252599-e8536cd97d2b?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cG9ydHJhaXR8ZW58MHx8MHx8fDA%3D" },
+        { name: "Ali Raza", title: "Tech Associate", imageUrl: "https://images.unsplash.com/photo-1624395213043-fa2e123b2656?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTk0fHxwb3J0cmFpdHxlbnwwfHwwfHx8MA%3D%3D" },
     ];
 
     return (
@@ -449,7 +449,7 @@ const MissionSectionComponent = () => (
              <div className="absolute inset-0 bg-blue-600 rounded-3xl rotate-3 opacity-20"></div>
              <img 
                // Изображение командной работы в офисе
-               src="https://images.unsplash.com/photo-1665686306574-1ace09918530?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+               src="https://plus.unsplash.com/premium_photo-1661297439055-379a011a8f5c?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
                alt="Professional team collaborating in a modern office." 
                className="relative rounded-3xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-500 w-full h-full object-cover"
              />
