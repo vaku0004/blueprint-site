@@ -88,12 +88,12 @@ const LogoCircle = ({ className = "" }) => (
 /* ===== TRUST SECTION ===== */
 const TrustSection = () => {
   const logos = [
-    { name: "North Star Logistics", Icon: LogoStack },
-    { name: "TransGlobal Freight", Icon: LogoWordmark },
-    { name: "Eagle Transport Co.", Icon: LogoCircle },
-    { name: "Pacific Hauling", Icon: LogoStack },
-    { name: "Midwest Express", Icon: LogoWordmark },
-    { name: "Rocky Mountain Fleet", Icon: LogoCircle }
+    { name: "JM Bozeman", src: "/blueprint-site/img/logo1.png" },
+    { name: "Steve's", src: "/blueprint-site/img/logo2.png" },
+    { name: "HFC", src: "/blueprint-site/img/logo3.png" },
+    { name: "Pride Transport", src: "/blueprint-site/img/logo4.png" },
+    { name: "JASKo", src: "/blueprint-site/img/logo5.png" },
+    { name: "Heyl", src: "/blueprint-site/img/logo6.png" }
   ];
 
   return (
@@ -110,19 +110,24 @@ const TrustSection = () => {
 
         {/* Logos Block */}
         <div className="grid grid-cols-3 md:grid-cols-6 gap-8 max-w-6xl mx-auto">
-          {logos.map(({ name, Icon }, index) => (
+          {logos.map((logo, index) => (
             <div
               key={index}
               className="group flex flex-col items-center gap-3 grayscale hover:grayscale-0 transition-all duration-500"
             >
-              {/* ICON */}
+              {/* LOGO IMAGE */}
               <div className="flex items-center justify-center h-10 w-full">
-                <Icon className="h-8 w-auto max-w-[110px] block mx-auto text-white/70 transition-colors group-hover:text-white" />
+                <img
+                  src={logo.src}
+                  alt={logo.name}
+                  className="h-8 w-auto max-w-[110px] block mx-auto opacity-70 group-hover:opacity-100 transition-opacity"
+                  loading="lazy"
+                />
               </div>
 
               {/* COMPANY NAME */}
               <span className="text-xs font-medium text-zinc-500 text-center transition-colors leading-tight group-hover:text-white">
-                {name}
+                {logo.name}
               </span>
             </div>
           ))}
@@ -164,8 +169,8 @@ const HomeSection = ({ setPage }) => (
         <img 
           // Обновлено изображение на водителя грузовика в кабине
           // Используем прямой URL для IpNMxycrk2o и обновленное русское описание alt
-          src="https://plus.unsplash.com/premium_photo-1670650045802-4e0d3a3a4d19?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
-          alt="Профессиональный водитель грузовика, улыбающийся рядом со своим полуприцепом." 
+          src={`${import.meta.env.BASE_URL}img/truck-driver2.jpg`}
+          alt="A professional truck driver smiling next to his semi-trailer" 
           className="relative rounded-3xl border border-white/10 shadow-2xl shadow-black/50 w-full object-cover h-[400px] opacity-80 object-center" 
         />
         <div className="absolute bottom-[-20px] left-1/2 -translate-x-1/2 bg-zinc-950 border border-zinc-800 p-4 rounded-2xl flex gap-8 shadow-xl whitespace-nowrap overflow-hidden max-w-[90vw]">
