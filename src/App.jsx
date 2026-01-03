@@ -433,7 +433,7 @@ const CEOSummarySection = () => (
       {/* Image (Right Side) - kept h-[500px] for size consistency */}
       <div className="relative h-[500px] w-full">
         <img 
-          src="https://plus.unsplash.com/premium_photo-1683121132274-953b07f17ec7?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+          src="/blueprint-site/img/office.jpg" 
           alt="Профессиональный портрет генерального директора." 
           className="absolute inset-0 object-cover w-full h-full rounded-3xl shadow-2xl shadow-black/50"
         />
@@ -499,7 +499,7 @@ const MissionSectionComponent = () => (
              <div className="absolute inset-0 bg-blue-600 rounded-3xl rotate-3 opacity-20"></div>
              <img 
                // Изображение командной работы в офисе
-               src="https://plus.unsplash.com/premium_photo-1661297439055-379a011a8f5c?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+               src="/blueprint-site/img/office2.jpg" 
                alt="Professional team collaborating in a modern office." 
                className="relative rounded-3xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-500 w-full h-full object-cover"
              />
@@ -569,7 +569,7 @@ const ProgramsSection = ({ setActivePage }) => (
           <li className="flex gap-2"><CheckCircle size={16} className="text-blue-500"/> Basic CRM System</li>
           <li className="flex gap-2"><CheckCircle size={16} className="text-zinc-600"/> Recruiter Support</li>
         </ul>
-        <Button variant="outline" className="w-full" onClick={() => window.open('https://example.com/contact', '_blank')}>Select</Button>
+        <Button variant="outline" className="w-full" onClick={() => setActivePage('contact')}>Select</Button>
       </Card>
 
       {/* Card 2 - Featured */}
@@ -642,7 +642,7 @@ const TestimonialCard = ({ quote, fleetName, fleetSize, personName, personTitle,
                     src={personImageUrl} 
                     alt={personName} 
                     className="w-12 h-12 rounded-full object-cover" 
-                    onError={(e) => { e.target.onerror = null; e.target.src="https://placehold.co/48x48/1e293b/ffffff?text=User" }}
+                    onError={(e) => { e.target.onerror = null; e.target.src="/blueprint-site/img/driver2.jpg" }}
                 />
                 <div>
                     <p className="font-semibold text-white">{personName}</p>
@@ -657,7 +657,7 @@ const TestimonialCard = ({ quote, fleetName, fleetSize, personName, personTitle,
                 src={videoUrlPlaceholder} 
                 alt="Testimonial video thumbnail" 
                 className="w-full h-full object-cover opacity-70"
-                onError={(e) => { e.target.onerror = null; e.target.src="https://placehold.co/600x337/1e293b/ffffff?text=Video+Testimonial+Mockup" }}
+                onError={(e) => { e.target.onerror = null; e.target.src="/blueprint-site/img/driver3.jpg" }}
              />
              <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
                 <div className="p-4 bg-white/20 backdrop-blur-sm rounded-full cursor-pointer hover:bg-white/30 transition-colors">
@@ -674,17 +674,17 @@ const TestimonialCard = ({ quote, fleetName, fleetSize, personName, personTitle,
 
 const TestimonialsSection = () => {
     const testimonials = [
-        {
-            quote: "35 drivers hired and counting!",
-            fleetName: "Collins Trucking Co. Inc.",
-            fleetSize: "115+",
-            personName: "Dakota Collins",
-            personTitle: "VP Finance",
-            personImageUrl: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // Реалистичное изображение
-            videoText: "35 DRIVERS HIRED",
-            // Изображение, связанное с дальнобойщиками
-            videoUrlPlaceholder: "https://images.unsplash.com/photo-1521404499839-5ed4d2621021?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        },
+       // {
+        //    quote: "35 drivers hired and counting!",
+         //   fleetName: "Collins Trucking Co. Inc.",
+        //    fleetSize: "115+",
+         //   personName: "Dakota Collins",
+         //   personTitle: "VP Finance",
+         //   personImageUrl: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // Реалистичное изображение
+         //   videoText: "35 DRIVERS HIRED",
+         //   // Изображение, связанное с дальнобойщиками
+         //   videoUrlPlaceholder: "https://www.youtube.com/watch?v=DyU1gge4xGg"
+       // },
         {
             quote: "I can get as many leads as I want!",
             fleetName: "Pride Transport",
