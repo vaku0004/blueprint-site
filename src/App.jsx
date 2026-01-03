@@ -691,7 +691,7 @@ const TestimonialsSection = () => {
             fleetSize: "525+",
             personName: "Steve Schelin",
             personTitle: "Director of Recruiting, Pride Transport",
-            personImageUrl: "https://images.unsplash.com/photo-1522202176988-66273c827cd8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // Реалистичное изображение
+            personImageUrl: "/blueprint-site/img/driver3.jpg", // Реалистичное изображение
             videoText: "UNLIMITED LEADS",
             // Изображение, связанное с рекрутерами/диспетчерами
             videoUrlPlaceholder: "https://images.unsplash.com/photo-1628108502573-0495d46114a1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
