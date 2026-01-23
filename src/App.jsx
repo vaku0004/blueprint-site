@@ -15,7 +15,6 @@ import {
 } from "lucide-react";
 
 import {
-  BrowserRouter,
   Routes,
   Route,
   Link,
@@ -1164,22 +1163,19 @@ const Layout = () => {
 ========================= */
 
 const App = () => {
-  return (
-    <BrowserRouter basename={import.meta.env.BASE_URL}>
-      <Routes>
-        <Route element={<Layout />}>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/how-it-works" element={<HowItWorksPage />} />
-          <Route path="/programs" element={<ProgramsPage />} />
-          <Route path="/results" element={<ResultsPage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-          {/* fallback */}
-          <Route path="*" element={<HomePage />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
-  );
+ return (
+  <Routes>
+    <Route element={<Layout />}>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/how-it-works" element={<HowItWorksPage />} />
+      <Route path="/programs" element={<ProgramsPage />} />
+      <Route path="/results" element={<ResultsPage />} />
+      <Route path="/about" element={<AboutPage />} />
+      <Route path="/contact" element={<ContactPage />} />
+      <Route path="*" element={<HomePage />} />
+    </Route>
+  </Routes>
+);
 };
 
 export default App;
